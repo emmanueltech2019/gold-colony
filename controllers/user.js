@@ -536,12 +536,8 @@ module.exports.forgotPassword= async (req, res)=>{
       }
     }
     gene()
-    console.log({auth: {
-        user: process.env.NODEMAILER_USERNAME, // generated ethereal user
-        pass: process.env.NODEMAILER_PASSWORD, // generated ethereal password
-      }})
     let transporter = nodemailer.createTransport(smtpTransport({
-      host: "mail.tejyards.com",
+      host: "mail.devemmy.com",
       port: 465,
       secureConnection: true,
       debug: true,
@@ -558,7 +554,7 @@ module.exports.forgotPassword= async (req, res)=>{
 
     let info = await transporter
       .sendMail({
-        from: '"Arston Realtor Portal" <arston@tejyards.com>', // sender address
+        from: '"Realtor Portal" <goldcolonytemporaryemail@goldcolony.devemmy.com>', // sender address
         to: req.body.email, // list of receivers
         subject: "Realtors Portal ✔", // Subject line
         text: "Realtors Portal -  reset password", // plain text body
