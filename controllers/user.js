@@ -257,10 +257,12 @@ module.exports.refferalData=(req,res)=>{
                             //     })
                             // })
                         }else{
-                            return res.status(200).json({
+                            let data={
                                 upline:myupline,
                                 firstlv,
-                                secondlv:secondlvArrray
+                                secondlv:secondlvArrray}
+                            return res.status(200).json({
+                                data
                             })
                         }
                         
@@ -316,10 +318,13 @@ module.exports.refferalDataById=(req,res)=>{
                                 
                             }
                         }else{
-                            return res.status(200).json({
+                            let data ={
                                 upline:myupline,
                                 firstlv,
                                 secondlv:secondlvArrray
+                            }
+                            return res.status(200).json({
+                                data
                             })
                         }
                         
