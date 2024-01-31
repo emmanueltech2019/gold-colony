@@ -170,7 +170,7 @@ module.exports.profile=(req,res)=>{
             console.log("One",sales)
             sales.map((sle)=>{
                 console.log("Two",sle)
-                records.push(...sle)
+                records.push(sle)
             })
             let commissionPaidTrueCount = 0;
             let commissionPaidFalseCount = 0;
