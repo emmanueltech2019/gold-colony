@@ -167,9 +167,9 @@ module.exports.profile=(req,res)=>{
         Sales.find({user:user._id})
         .then((sales)=>{
             let records =[]
-            console.log(sales)
+            console.log("One",sales)
             sales.map((sle)=>{
-                console.log(sle)
+                console.log("Two",sle)
                 records.push(...sle.record)
             })
             let commissionPaidTrueCount = 0;
